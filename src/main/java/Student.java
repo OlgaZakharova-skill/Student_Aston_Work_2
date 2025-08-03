@@ -3,7 +3,7 @@ import java.util.List;
 public class Student {
     public String name;
     public String faculty;
-    private List<Book> books;
+    private final List<Book> books;
 
     public Student(String name, String faculty, List<Book> books) {
         this.name = name;

@@ -23,7 +23,7 @@ public class Main {
         students.stream()
                 .peek(System.out::println)
                 .flatMap(student -> student.getBooks().stream())
-                .sorted((x1, x2) -> Integer.compare(x1.getPages(), x2.getPages()))
+                .sorted((book1, book2) -> Integer.compare(book1.getPages(), book2.getPages()))
                 .filter(book -> book.getYear() > 2000)
                 .distinct()
                 .limit(3)
