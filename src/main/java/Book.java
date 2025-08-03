@@ -11,14 +11,6 @@ public class Book{
         this.pages = pages;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
     public int getYear() {
         return year;
     }

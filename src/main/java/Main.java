@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -23,7 +24,7 @@ public class Main {
         students.stream()
                 .peek(System.out::println)
                 .flatMap(student -> student.getBooks().stream())
-                .sorted((book1, book2) -> Integer.compare(book1.getPages(), book2.getPages()))
+                .sorted(Comparator.comparingInt(Book::getPages))
                 .filter(book -> book.getYear() > 2000)
                 .distinct()
                 .limit(3)
